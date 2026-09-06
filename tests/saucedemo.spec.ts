@@ -7,3 +7,4 @@ test('Verify SauceDemo title and URL', async ({ page }) => {
 
   await expect(page).toHaveURL('https://www.saucedemo.com/');
 });
+// Homework 1 - SauceDemo title and URL verification
