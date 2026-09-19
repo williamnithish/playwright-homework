@@ -1,3 +1,5 @@
+import { test, expect } from '@playwright/test';
+
 test('Verify locked out user error message', async ({ page }) => {
     await page.goto('https://www.saucedemo.com/');
 
@@ -10,3 +12,4 @@ test('Verify locked out user error message', async ({ page }) => {
 
     // Homework 2
 });
+ 
