@@ -4,6 +4,8 @@ test('problem_user shows same image for all products', async ({ page }) => {
 
     await page.goto('https://www.saucedemo.com/inventory.html');
 
+    await expect(page.locator('.inventory_list')).toBeVisible();
+
     const images = page.locator('.inventory_item_img img');
 
     await expect(images).toHaveCount(6);

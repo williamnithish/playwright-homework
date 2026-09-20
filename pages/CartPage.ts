@@ -1,12 +1,14 @@
+import { expect } from '../fixtures/cart.fixture';
 import { BasePage } from './BasePage';
 
 export class CartPage extends BasePage {
+async itemNames() {
+    const items = this.page.locator('.inventory_item_name');
 
-    async itemNames() {
-        return await this.page
-            .locator('.cart_item .inventory_item_name')
-            .allTextContents();
-    }
+    await expect(items.first()).toBeVisible();
+
+    return await items.allTextContents();
+}
 
     async removeItem(productName: string) {
         await this.page
